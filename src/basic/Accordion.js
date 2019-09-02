@@ -15,6 +15,7 @@ import variable from '../theme/variables/platform';
 import { ListItem } from './ListItem';
 import { Text } from './Text';
 import { Icon } from './Icon';
+import {Input} from "native-base";
 
 class DefaultHeader extends React.Component {
   render() {
@@ -74,7 +75,7 @@ class DefaultContent extends React.Component {
           contentStyle || { backgroundColor: variables.contentStyle }
         ]}
       >
-        {content}
+        <Input placeholder={content}/>
       </ListItem>
     );
   }
