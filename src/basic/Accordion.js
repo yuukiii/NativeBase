@@ -11,6 +11,8 @@ import {
 
 import variable from '../theme/variables/platform';
 
+
+import { ListItem } from './ListItem';
 import { Text } from './Text';
 import { Icon } from './Icon';
 
@@ -66,14 +68,14 @@ class DefaultContent extends React.Component {
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables
       : variable;
     return (
-      <Text
+      <ListItem
         style={[
           { padding: variable.accordionContentPadding },
           contentStyle || { backgroundColor: variables.contentStyle }
         ]}
       >
         {content}
-      </Text>
+      </ListItem>
     );
   }
 }
